@@ -84,9 +84,10 @@ Total: 9
 2. The category unknown is an explicit categorical value
    in several features; it is not automatically a missing value.
 3. The duration feature represents the duration of the last
-   contact in seconds. It may not be available before a new
-   marketing call begins, so its suitability for prospective
-   prediction must be considered.
+   contact in seconds. Since it is only known after the contact
+   ends, using it to predict subscription before a call begins
+   may cause data leakage. Its inclusion must be carefully
+   evaluated for prospective prediction.
 4. The target variable y contains two classes: yes and no.
 5. The target distribution is imbalanced:
    - no: 4,000 records (88.48%)

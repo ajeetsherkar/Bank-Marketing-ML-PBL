@@ -8,6 +8,21 @@
 - Target variable: y
 - Target labels available: No
 
+## 1.1 CSV Format and Delimiters
+
+The training and test CSV files use different delimiters:
+
+- Training file `bank.csv`: semicolon-separated (`;`).
+- Test file `test.csv`: comma-separated (`,`).
+
+Therefore, they must be loaded separately using the
+appropriate delimiter:
+
+```python
+train_df = pd.read_csv("../data/raw/bank.csv", sep=";")
+test_df = pd.read_csv("../data/raw/test.csv", sep=",")
+```
+
 ## 2. Schema Comparison
 
 The training dataset contains 16 predictor features and the
