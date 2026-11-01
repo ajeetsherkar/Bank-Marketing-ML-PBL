@@ -1,0 +1,19 @@
+{
+    "model_name": "Gradient Boosting",
+    "evaluation_timestamp_utc": "2026-11-01T10:45:42.700233+00:00",
+    "dataset_path": "/Users/ajeetsherkar/Bank-Marketing-ML-PBL/data/raw/bank.csv",
+    "evaluation_records": 4521,
+    "decision_threshold": 0.7419,
+    "accuracy": 0.8874142888741429,
+    "precision": 0.5258620689655172,
+    "recall": 0.23416506717850288,
+    "f1_score": 0.3240371845949535,
+    "roc_auc": 0.7626734644913628,
+    "pr_auc": 0.385758928520895,
+    "true_negatives": 3890,
+    "false_positives": 110,
+    "false_negatives": 399,
+    "true_positives": 122,
+    "customers_contacted": 232,
+    "evaluation_note": "Interpret as independent generalization performance only if the evaluation dataset was not used for model training, tuning, or threshold selection."
+}

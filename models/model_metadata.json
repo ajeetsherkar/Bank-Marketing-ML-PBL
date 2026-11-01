@@ -1,0 +1,70 @@
+{
+    "project": "Bank Marketing Subscription Prediction",
+    "model_name": "Gradient Boosting",
+    "model_type": "GradientBoostingClassifier",
+    "random_state": 42,
+    "decision_threshold": 0.7419,
+    "threshold_selection": "Selected using validation F1 analysis in Phase 7",
+    "features": [
+        "age",
+        "balance",
+        "day",
+        "campaign",
+        "pdays",
+        "previous",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "contact",
+        "month",
+        "poutcome"
+    ],
+    "numerical_features": [
+        "age",
+        "balance",
+        "day",
+        "campaign",
+        "pdays",
+        "previous"
+    ],
+    "categorical_features": [
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "contact",
+        "month",
+        "poutcome"
+    ],
+    "excluded_features": [
+        "duration"
+    ],
+    "target_column": "y",
+    "target_mapping": {
+        "no": 0,
+        "yes": 1
+    },
+    "preprocessing": [
+        "SMOTENC",
+        "StandardScaler",
+        "OneHotEncoder"
+    ],
+    "hyperparameters": {
+        "model__learning_rate": 0.07027897634919636,
+        "model__max_depth": 2,
+        "model__min_samples_leaf": 2,
+        "model__min_samples_split": 13,
+        "model__n_estimators": 207,
+        "model__subsample": 0.8
+    },
+    "training_dataset_rows": 4521,
+    "validation_rows": 905,
+    "validation_test_size": 0.2,
+    "training_timestamp_utc": "2026-11-01T10:44:06.111214+00:00",
+    "model_artifact": "models/best_model.joblib"
+}
