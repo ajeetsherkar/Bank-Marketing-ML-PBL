@@ -74,11 +74,12 @@ The relatively small training-validation gaps suggest that the selected model do
 The default classification threshold of 0.50 was compared with alternative thresholds.
 
 - Default threshold: 0.50
-- Best validation F1 threshold: approximately 0.7419
-- Default validation F1-score: 0.3128
-- Maximum validation F1-score found during threshold analysis: 0.3436
+- Selected threshold: 0.7419
+- Reproducible Phase 9 validation F1-score at threshold 0.7419: 0.3333
+- Reproducible Phase 9 precision at threshold 0.7419: 0.4655
+- Reproducible Phase 9 recall at threshold 0.7419: 0.2596
 
-At the selected threshold, precision increased to 0.4746, while recall decreased to 0.2692.
+The original Phase 7 notebook recorded a maximum validation F1-score of 0.3436 at threshold 0.7419. The later Phase 9 training workflow produced slightly different validation probabilities and metrics at the same threshold. The Phase 9 results are used as the final reproducible evaluation results.
 
 This demonstrates the trade-off between reducing unnecessary marketing calls and identifying more potential subscribers.
 
@@ -118,9 +119,9 @@ The final operating threshold should be selected according to the bank's busines
 
 ## 10. Final Conclusion
 
-Gradient Boosting was selected because it achieved the strongest overall tuned validation performance among the five evaluated models.
+Gradient Boosting was selected based on the comparative model evaluation.
 
-The model achieved a validation F1-score of 0.3128, ROC-AUC of 0.7171 and PR-AUC of 0.3211 at the default threshold.
+In the final reproducible Phase 9 validation workflow, the model achieved an F1-score of 0.3128 at threshold 0.50 and 0.3333 at threshold 0.7419. ROC-AUC was 0.7171 and PR-AUC was 0.3211.
 
 Cross-validation demonstrated reasonably stable performance. Threshold analysis also showed that the classification threshold can be adjusted to balance precision and recall according to business requirements.
 
